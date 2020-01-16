@@ -49,3 +49,24 @@ function dnd_sentence() {
     let race = races[random(7)];
     console.log("The " + race + " " + cl + " struck down the "+ bbeg + " using the legendary " + weapon + "!");
 }
+
+/**************************************************************************
+ * Simple function to test if a number is odd.
+**************************************************************************/
+function isOdd(num){
+    return num % 2 === 1;
+}
+
+/**************************************************************************
+ * This function builds a chessboard and logs it to the console.
+**************************************************************************/
+function create_chessboard(){
+    let str = ""
+    for(i = 0; i < 8; i++){
+        if(isOdd(i+1))
+            str+=" # # # #\n"
+        else 
+            str+="# # # # \n"
+    }
+    console.log(str);
+}
