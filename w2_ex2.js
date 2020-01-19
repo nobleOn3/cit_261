@@ -106,3 +106,32 @@ function evenOrOdd(x){
     else
         console.log("The number is odd!");
 }
+
+/**************************************************************************
+ * This function returns an array from the first parameter to the second.
+ * Does not work, strange bug that causes my computer to work extremely 
+ * hard. Not sure what the problem is. start always comes up undefined.
+**************************************************************************/
+// function range(start = 1, end = 1, step = 1){
+//     let arr = [];
+//     for(let i = start; i < end; i+=step) {
+//         arr.push(i);
+//     }
+//     console.log(arr);
+//     return arr;
+// }
+
+/**************************************************************************
+ * This function returns an array from the first parameter to the second.
+ * Working version of range.
+**************************************************************************/
+function range2(start, end){
+    let arr = [];
+    start++;
+    start--;
+    for(let i = start; i <= end; i++) {
+        arr.push(i);
+    }
+    console.log(arr);
+    return arr;
+}
