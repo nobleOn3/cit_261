@@ -70,3 +70,39 @@ function create_chessboard(){
     }
     console.log(str);
 }
+
+/**************************************************************************
+ * This function returns the smallest of two numbers.
+**************************************************************************/
+function min(x, y){
+    if(x < y){
+        console.log(x);
+        return x;
+    }
+    else{
+        console.log(y);
+        return y;
+    }
+  }
+
+/**************************************************************************
+ * This function returns whether a number is odd or even.
+**************************************************************************/
+function isEven(x){
+    if(x == 0)
+        return true;
+    else if(x == 1)
+        return false;
+    else
+        return isEven(x - 2);
+}
+
+/**************************************************************************
+ * This function prints whether a number is odd or even.
+**************************************************************************/
+function evenOrOdd(x){
+    if(isEven(x) == true)
+        console.log("The number is even!");
+    else
+        console.log("The number is odd!");
+}

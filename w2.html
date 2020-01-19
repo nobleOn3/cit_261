@@ -17,6 +17,13 @@
     <button type="button" id="act_dnd" onclick="dnd_sentence()">Lets roll!</button>
     <p>Press this button to create a chessboard in the console!</p>
     <button type="button" id="chess" onclick="create_chessboard()">Checkmate!</button>
+    <p>Find the smallest of two numbers:</p>
+    <input type="text" id="num1"/>
+    <input type="text" id="num2"/>
+    <button type="button" onclick="min(document.getElementById('num1').value, document.getElementById('num2').value)">COMPUTE!</button>
+    <p>Is a number odd, or even?</p>
+    <input type="text" id="oddNum"/>
+    <button type="button" onclick="evenOrOdd(document.getElementById('oddNum').value)">Odd?</button>
 
     
 </body>
