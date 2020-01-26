@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+  
 
 <p>Subtract the numbers in the array, starting from the left:</p>
 
@@ -23,6 +24,13 @@ var numbers = [
     { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
     { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
 ];
+
+/*https://github.com/byui-cit/cit261/blob/gh-pages/teacher/hiking-start.html
+  const category = document.querySelector('.mw-category');
+  const links = Array.from(category.querySelectorAll('a'));
+  const streets = links
+                    .map(links=>links.textContent)
+                    .filter(streetName => streetName.inclueds('de'));*/
 
 document.getElementById("demo").innerHTML = numbers.reduce(myFunc, 0);
 
