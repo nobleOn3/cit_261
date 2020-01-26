@@ -46,8 +46,10 @@ const MOUNTAINS = [
   ];
 
 /***********************************************************
- * This function builds a table which is then displayed
- * To the user in the "mntns" tag.
+ * This function builds a table and returns it. This code
+ * was pulled from the answer the website gave, since I 
+ * didn't understand things well enough after 30 mins to 
+ * build it on my own.
  **********************************************************/
   function buildTable(data) {
     let table = document.createElement("table");
@@ -78,10 +80,18 @@ const MOUNTAINS = [
     return table;
   }
 
+/***********************************************************
+ * This function displays a table built off of the 
+ * MOUNTAINS object array.
+ **********************************************************/
   function buildMntns() {
     document.querySelector("#mntns").appendChild(buildTable(MOUNTAINS));
   }
 
+  /***********************************************************
+ * This function displays a table built off of the GAMES
+ * object array.
+ **********************************************************/
   function buildGames() {
     document.querySelector("#gms").appendChild(buildTable(GAMES));
   }

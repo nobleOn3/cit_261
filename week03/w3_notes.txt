@@ -1,0 +1,13 @@
+Chapter 14 from eloquentjavascript.net
+-----------------------------------------------------------
+-DOM is split into nodes., with each tag being a node, and
+each node within that node being a child of it.
+-<body> (1st Node)
+------<div> (2nd Node and also child of 1st Node, parent of 3rd)
+------------<table> (3rd Node and child of 2nd Node)
+
+-Each parent node has a childNode property and each child
+has a parentNode property
+--firstChild points to first and lastChild points to last
+--previousSibling and next Sibling also are handy for moving
+through children nodes
