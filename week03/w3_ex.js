@@ -75,7 +75,6 @@ const MOUNTAINS = [
       });
       table.appendChild(row);
     });
-    console.log(table);
 
     return table;
   }
@@ -94,4 +93,16 @@ const MOUNTAINS = [
  **********************************************************/
   function buildGames() {
     document.querySelector("#gms").appendChild(buildTable(GAMES));
+  }
+
+  function showValues() {
+      let tables = Array.from(document.querySelectorAll("table"));
+      tables.forEach(myFunc)
+  
+  }
+
+  function myFunc(item, index) {
+    console.log(item.Array);
+    //i = Array.from(item);
+    //i.forEach((item, index) => console.log(item + " " + index));
   }
