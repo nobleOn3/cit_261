@@ -1,3 +1,55 @@
-#table {
-    border-bottom: 5px
+#tbl {
+    border-color: black;
+    border-bottom: 5px;
+    margin: auto;
+}
+
+td{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+}
+#two {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+#four {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+}
+#six {
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+}
+#eight{
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+#one {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#three {
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+
+#five {
+    border: 2px solid black;
+}
+
+#seven {
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#nine {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
 }
