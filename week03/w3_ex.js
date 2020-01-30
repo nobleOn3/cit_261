@@ -102,7 +102,7 @@ const MOUNTAINS = [
   }
 
   function myFunc(item, index) {
-    console.log(item.Array);
+    console.log(item.);
     //i = Array.from(item);
     //i.forEach((item, index) => console.log(item + " " + index));
   }

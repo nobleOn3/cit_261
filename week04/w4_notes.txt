@@ -1,2 +1,4 @@
 JavaScript Novice to Ninja Ch. 8 Forms
 ----------------------------------------------------------
+-Can catch a form submission in JavaScript before it is
+submitted by adding an event listener.
