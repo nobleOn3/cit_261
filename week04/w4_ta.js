@@ -21,4 +21,5 @@ function reset(){
             tb.rows[i].cells[c].innerHTML ="";
         }
     }
+    turn = 0;
 }
