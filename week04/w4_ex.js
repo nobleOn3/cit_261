@@ -1,4 +1,5 @@
 class PC {
+    //TODO:Solve the problem with the default values working with passing in the document selectors?
     constructor(clss="Barbarian", hp=10, nm="Name the Unknown") {
         this.nm = nm;
         this.clss = clss;
