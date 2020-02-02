@@ -40,8 +40,29 @@ function addPC() {
             return 0;
         }
     });
-    
+
     console.log(pcList);
+}
+
+function displayPCs() {
+    t = document.createElement('table');
+    r= t.insertRow(0);
+    c = r.insertCell(0);
+    c.innerHTML = "Class";
+    c = r.insertCell(1);
+    c.innerHTML = "Hp";
+    c = r.insertCell(2);
+    c.innerHTML = "Name";
+    for(let i = 0; i < pcList.length; i++){ 
+        r = t.insertRow(i);
+        c = r.insertCell(0);
+        c.innerHTML = pcList[i].clss;
+        c = r.insertCell(1);
+        c.innerHTML = pcList[i].hp;
+        c = r.insertCell(2);
+        c.innerHTML = pcList[i].nm;
+    }
+    document.getElementById("addTable").appendChild(t);
 }
 
 

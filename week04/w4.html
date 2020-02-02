@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="w4.css">
     <title>Week 04</title>
 </head>
 <body>
@@ -25,11 +26,14 @@
         Name:<input type='text' id='nm'>
         <button id="takeInfo" onclick='addPC()'>Add PC</button>
         <button id='logInfo' onclick="logPC()">Log Info</button>
+        <button id='displayPCs' onclick="displayPCs()">Display the PCs</button>
     </div>
-    <form name = 'search' action='\search'>
+
+    <div id="addTable"></div>
+    <!-- <form name = 'search' action='\search'>
         <input name='sInput'>
         <button type='submit'>Search</button>
-    </form>
+    </form> -->
 <script src='w4_ex.js'></script>    
 </body>
 </html>

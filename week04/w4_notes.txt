@@ -13,3 +13,11 @@ Constructer format for objects:
             return Math.floor(this.sides * Math.random() + 1)
         }
     }
+
+if a function has the static typing attached to it, then it
+can only be called from the class itself, not an instance
+of the class.
+EX: static description.....
+    Dice.description(); //Works!
+    redDice = new Dice();
+    redDice.description(); //Won't work
