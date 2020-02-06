@@ -1,8 +1,16 @@
 import { qs, qsa, writeToLS, readFromLS, bindTouch } from "./utl.js";
 let toDoList = [];
 
-function saveToDo(toDo){
-    console.log('saved', toDo);
+function saveToDo(toDoText, toDoTime){
+    const toDo = {
+        timeStamp: toDoTime,
+        content: toDoText,
+        completed: false
+    }
+
+    toDoList.push(toDo);
+
+    console.log('saved', toDoList);
     writeToLS('toDos', toDoList);
 }
 
@@ -16,10 +24,12 @@ export default class Todo {
     }
 
     addNewToDo(){
-        //save to datastore
-        const todoText = qs('#newTodo'); //expects a CSS like id
+        const toDoText = qs('#content').value; //expects a CSS like id
+        let date = new Date();
+        const toDoTime = date.getTime();
+
         //list Todos
-        saveToDo(todoText.value);
+        saveToDo(toDoText, toDoTime);
         //lists ToDos
         this.listToDos();
     }

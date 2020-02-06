@@ -1,0 +1,14 @@
+.bot{
+    position:fixed;
+	bottom:0;
+	width:100%;
+	height:30px;			
+}
+#content{
+    width:85%;
+    height:20px;
+}
+#welcome{
+    text-align: center;
+    color: blue;
+}
