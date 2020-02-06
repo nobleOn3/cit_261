@@ -1,0 +1,8 @@
+From Class
+-------------------------------------------------------------------
+Can use debugging by using debugger keyword.
+Better way to use it though:
+    if (debug){
+        debugger;
+    }
+with debug being a constant variable that is being set at the top of the code.
