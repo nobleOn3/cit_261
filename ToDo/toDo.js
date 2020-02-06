@@ -1,8 +1,9 @@
-import { qs, qsa, bindTouch } from "./utl.js";
+import { qs, qsa, writeToLS, readFromLS, bindTouch } from "./utl.js";
 let toDoList = [];
 
 function saveToDo(toDo){
     console.log('saved', toDo);
+    writeToLS('toDos', toDoList);
 }
 
 export default class Todo {
