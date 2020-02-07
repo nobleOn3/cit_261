@@ -2,3 +2,4 @@ import{qs, qsa} from './utl.js'; //Non-default import, remember that this is dum
 import Todo from './toDo.js';
 
 const myTodo = new Todo();
+document.addEventListener('load', myTodo.listToDos);

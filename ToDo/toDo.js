@@ -1,6 +1,25 @@
 import { qs, qsa, writeToLS, readFromLS, bindTouch } from "./utl.js";
 let toDoList = [];
 
+function display(item, index){
+    let disp = document.createElement('div');
+    disp.id = "tmp";
+    let buttn1 = document.createElement('input');
+    let para = document.createElement('span');
+    let buttn2 = document.createElement('button');
+    buttn1.type = 'radio';
+    buttn1.id = 'dispComplete';
+    buttn2.innerHTML = "X";
+    para.innerHTML = item.content;
+    para.id = "dispContent";
+    buttn2.id = "dispRemove";
+    disp.appendChild(buttn1);
+    disp.appendChild(para);
+    disp.appendChild(buttn2);
+    document.getElementById('#display').appendChild(disp);
+
+}
+
 function saveToDo(toDoText, toDoTime){
     const toDo = {
         timeStamp: toDoTime,
@@ -20,7 +39,8 @@ export default class Todo {
     }
 
     listToDos(){
-        
+        document.getElementById('#display').innerHTML = "";
+        toDoList.forEach(display);       
     }
 
     addNewToDo(){

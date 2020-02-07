@@ -12,3 +12,24 @@
     text-align: center;
     color: blue;
 }
+#tmp{
+    color:blue;
+    height:30px;
+    text-align: center;
+    border: 1px solid black;
+    padding-top: 2%;
+}
+#dispContent{
+    width: 75%;
+    padding:20px;
+}
+
+#dispRemove{
+    position:fixed;
+    right:10px;
+}
+
+#dispComplete{
+    position:fixed;
+    left:10px;
+}
