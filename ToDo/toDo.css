@@ -27,9 +27,10 @@
 #dispRemove{
     position:fixed;
     right:10px;
+    border-radius: 50%;
 }
 
-#dispComplete{
+.dispComplete{
     position:fixed;
     left:10px;
 }
