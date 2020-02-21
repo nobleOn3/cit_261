@@ -1,1 +1,26 @@
 Notes for Week 07, talking about functions and AJAX requests.
+
+IIFE (pronounced 'iffy')
+--------------------------------------------------
+Is a function that is called right after it is 
+declared. Performed simply by placing ()
+after the function declaration.
+
+Best used if the function only needs to be fun once.
+This helps keep global variables down in number,
+uses similar ideas to strict mode.
+
+Function Redefining
+--------------------------------------------------
+Functions can redifine themselves if it has a
+variable with the same name as the function itself,
+and that variable is assigned to an anonymous 
+function.
+
+Promises
+---------------------------------------------------
+Essentially do the same thing as a callback, but
+simplify the process to reduce/avoid confusing 
+code.
+
+Pending
