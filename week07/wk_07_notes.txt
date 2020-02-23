@@ -1,5 +1,6 @@
 Notes for Week 07, talking about functions and AJAX requests.
-
+Chapter 11 Further Functions
+---------------------------------------------------------------------------
 IIFE (pronounced 'iffy')
 --------------------------------------------------
 Is a function that is called right after it is 
@@ -23,4 +24,60 @@ Essentially do the same thing as a callback, but
 simplify the process to reduce/avoid confusing 
 code.
 
-Pending
+Pending->Unsettled->settled(resolved, rejected)
+
+Returning Functions
+----------------------------------------------------
+Functions can be returned in JavaScript. To use a 
+returned function you have to save it to be variable.
+
+function returnHello() {
+    console.log('returnHello() called');
+    return function() { //return a function that logs "Hello World!"
+        console.log('Hello World!');
+    }
+}
+
+const hello = returnHello(); //Set returned function to be equal to hello
+<< returnHello() called
+
+hello() //Function Call
+<< Hello World!
+
+Chapter 13 AJAX
+---------------------------------------------------------------------
+Fetch API is a global method that allows simple requests. It only needs a URL to fetch data from a server.
+
+fetch('https://example.com/data')
+.then( // code that handles the response )
+.catch( // code that runs if the server returns an error )
+
+Important to check for a 200 response when using fetch because a 201, 204, or even a 404 can be considered a 
+successful request.
+
+The text() method allows a stream of text from the response to be turned into a JavaScript string.
+
+fetch(url)
+.then( response => response.text() ); // transforms the text stream into a JavaScript string
+.then( text => console.log(text) )
+.catch( error => console.log('There was an error: ', error))
+
+the JSON method turns the response into a JavaScript object (USEFUL!)
+
+fetch(url)
+.then( response => response.json() ); // transforms the JSON data into a JavaScript object
+.then( data => console.log(Object.entries(data)) )
+.catch( error => console.log('There was an error: ', error))
+
+A response can be created through the creation of a response object. 
+
+const response = new Response( 'Hello!', {
+    ok: true,
+    status: 200,
+    statusText: 'OK',
+    type: 'cors',
+    url: '/api'
+});
+
+Why are headers important?
+
