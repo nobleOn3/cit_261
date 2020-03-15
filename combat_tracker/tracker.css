@@ -1,0 +1,29 @@
+.bot{
+    position:fixed;
+	bottom:0;
+	width:100%;
+	height:80px;			
+}
+#name, #initiative, #health_pool{
+    width: 20%;
+    margin-bottom: 5px;
+}
+
+#spell_name{
+    width:35%;
+}
+
+#duration{
+    widows: 23%;
+}
+#add_combatant{
+    width:10%;
+    font-size: ;
+}
+#welcome{
+    text-align: center;
+    color: black;
+}
+#w_message{
+    text-align: center;
+}
