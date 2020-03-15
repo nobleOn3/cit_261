@@ -2,23 +2,30 @@
     position:fixed;
 	bottom:0;
 	width:100%;
-	height:80px;			
+	height:78px;			
 }
 #name, #initiative, #health_pool{
-    width: 20%;
+    width: 23%;
     margin-bottom: 5px;
 }
 
 #spell_name{
-    width:35%;
+    width: 50%;
+    margin-bottom: 5px;
 }
 
 #duration{
-    widows: 23%;
+    width: 33%;
+    margin-bottom: 5px;
 }
 #add_combatant{
-    width:10%;
-    font-size: ;
+    width:23%;
+}
+#add_spell{
+    width: 10%;
+}
+#victim, #value, #attack, #heal{
+    width:23%;
 }
 #welcome{
     text-align: center;
