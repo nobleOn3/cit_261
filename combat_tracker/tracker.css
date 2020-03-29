@@ -15,22 +15,50 @@
 }
 
 #duration{
-    width: 33%;
+    width: 32%;
     margin-bottom: 5px;
 }
+
 #add_combatant{
     width:23%;
 }
+
 #add_spell{
     width: 10%;
 }
+
 #victim, #value, #attack, #heal{
     width:23%;
 }
+
 #welcome{
     text-align: center;
     color: black;
 }
+
 #w_message{
     text-align: center;
+}
+
+#char_display {
+    width: 80%;
+    height: 350px;
+    background-color: aquamarine;
+    margin-bottom: 30px;
+    margin-right: 10%;
+    margin-left: 10%;
+
+}
+
+#spl_display {
+    width: 80%;
+    height: 250px;
+    background-color: aquamarine;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#c_label, #s_label{
+    text-align: center;
+    margin-bottom: 5px;
 }
