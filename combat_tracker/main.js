@@ -18,8 +18,45 @@ let s_list = []; // list of spells
 
 //Display functions
 function display_combatants(){
+    let c_display = document.getElementById("c_table");
+
+    c_display.innerHTML = "";
+
+    let newRow = document.createElement('tr');
+
+    let newCell = document.createElement('td');
+    newCell.innerHTML = "Name";
+    newRow.appendChild(newCell);
+
+    newCell = document.createElement('td');
+    newCell.innerHTML = "Initiative";
+    newRow.appendChild(newCell);
+
+    newCell = document.createElement('td');
+    newCell.innerHTML = "HP";
+    newRow.appendChild(newCell);
+
+
+    c_display.appendChild(newRow); 
+
     for(const element of c_list) {
         console.log(element.name, element.hp, element.initiative);
+
+        newRow = document.createElement('tr');
+        newCell = document.createElement('td');
+        newCell.innerHTML = element.name;
+        newRow.appendChild(newCell);
+
+        newCell = document.createElement('td');
+        newCell.innerHTML = element.initiative;
+        newRow.appendChild(newCell);
+
+        newCell = document.createElement('td');
+        newCell.innerHTML = element.hp;
+        newRow.appendChild(newCell);
+
+
+        c_display.appendChild(newRow);       
     }
 }
 

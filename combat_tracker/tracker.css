@@ -4,6 +4,7 @@
 	width:100%;
 	height:78px;			
 }
+
 #name, #initiative, #health_pool{
     width: 23%;
     margin-bottom: 5px;
@@ -47,7 +48,6 @@
     margin-bottom: 30px;
     margin-right: 10%;
     margin-left: 10%;
-
 }
 
 #spl_display {
@@ -61,4 +61,11 @@
 #c_label, #s_label{
     text-align: center;
     margin-bottom: 5px;
+}
+
+#c_table{
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%; 
+    text-align: center;
 }
