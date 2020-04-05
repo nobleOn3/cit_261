@@ -20,11 +20,15 @@ document.getElementById('next_round').addEventListener('touchend', () =>{
 document.getElementById('attack').addEventListener('touchend', () =>{
     attack(document.getElementById('value').value);
     display_combatants();
+    document.getElementById('victim').value = "";
+    document.getElementById('value').value = "";
 })
 
 document.getElementById('heal').addEventListener('touchend', () =>{
     heal(document.getElementById('value').value);
     display_combatants();
+    document.getElementById('victim').value = "";
+    document.getElementById('value').value = "";
 })
 
 //Lists of objects
@@ -117,6 +121,9 @@ function add_spell(){
 
     let s = new Spell(name, dura);
     s_list.push(s);
+
+    document.getElementById('spell_name').value = "";
+    document.getElementById('duration').value = "";
 }
 
 function add_combatant(){
@@ -127,12 +134,16 @@ function add_combatant(){
     let c = new Combatant(name, init, hp);
     c_list.push(c);
     c_list.sort(compare_cmbt);
+
+    document.getElementById('name').value = "";
+    document.getElementById('initiative').value = "";
+    document.getElementById('health_pool').value = "";
 }
 
 function compare_cmbt(a,b){
-    if(b.initiative < a.initiative)
+    if(parseInt(b.initiative) < parseInt(a.initiative))
         return -1;
-    else if(b.intiative > a.intiative)
+    else if(parseInt(b.initiative) > parseInt(a.initiative))
         return 1;
     else
         return 0;
@@ -142,11 +153,15 @@ function next_round() {
     for(const element of s_list){
         console.log(element);
         element.reduce_duration(1);
-        if(element.duration === 0){
-            let removeIndex = s_list.map(function(element){return element;});
+        if(element.duration <= 0){
+            let removeIndex = s_list.findIndex(x => x.name === element.name);
             s_list.splice(removeIndex, 1);
         }
     }
+}
+
+function checkSpell(spell, element){
+    return  spell.name == element.name;
 }
 
 function attack(damage){
@@ -154,8 +169,9 @@ function attack(damage){
 
     combatant.getHit(damage);
 
-    if(combatant.hp === 0){
-        let removeIndex = c_list.map(function(combatant){return combatant;});
+    if(combatant.hp <= 0){
+        let removeIndex = c_list.findIndex(x => x.name === combatant.name);
+        console.log(removeIndex);
         c_list.splice(removeIndex, 1);
     }
 }
@@ -164,10 +180,15 @@ function checkCombatant(combatant){
     return combatant.name == document.getElementById('victim').value;
 }
 
+function findCombatant(tmpCom, combatant)
+{
+    return combatant.name == tmpCom.name;
+}
+
 function heal(healing){
     let combatant = c_list.find(checkCombatant);
 
-    combatant.getHealed(parseInt(healing));
+    combatant.getHealed(healing);
 }
 
 

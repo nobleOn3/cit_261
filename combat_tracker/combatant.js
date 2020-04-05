@@ -6,7 +6,7 @@
 export default class Combatant {
     constructor(n, i, h) {
         this.name = n;
-        this.hp =  h;
+        this.hp =  parseInt(h);
         this.initiative = i;
         this.alive = true;
     }
@@ -16,7 +16,7 @@ export default class Combatant {
     }
 
     getHealed(value) {
-        this.hp += value;
+        this.hp += parseInt(value);
     }
 
     isAlive() {
