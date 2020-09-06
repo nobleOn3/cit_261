@@ -5,31 +5,66 @@
 	height:78px;			
 }
 
+.menu{
+    float:right;
+    width: 140px;
+    height: 200px;
+    margin-right:0px;
+    clear:both;
+}
+
+.menu_buttons{
+    float:left;
+    width: 40px;
+}
+
+.menu_button{
+    height: 40px;
+    width: 40px;
+    background-color:lightgrey;
+}
+
+.sub_menu{
+    float: right;
+    background-color:lightgrey;
+    width: 100px;
+    height: 120px;
+}
+
 #name, #initiative, #health_pool{
-    width: 23%;
+    width: 90px;
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 
-#spell_name{
-    width: 50%;
+#spell_name, #duration{
+    width: 90px;
     margin-bottom: 5px;
-}
-
-#duration{
-    width: 32%;
-    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 #add_combatant{
-    width:23%;
+    width:74px;
+    margin-right: 13px;
+    margin-left:13px;
 }
 
 #add_spell{
-    width: 10%;
+    width:74px;
+    margin-right: 13px;
+    margin-left:13px;
 }
 
-#victim, #value, #attack, #heal{
-    width:23%;
+#victim, #value{
+    width: 90px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#attack, #heal {
+    width: 60px;
+    margin-right: 20%;
+    margin-left:20%;
 }
 
 #welcome{
@@ -42,24 +77,25 @@
 }
 
 #char_display {
-    width: 80%;
-    height: 350px;
+    width: 60%;
+    height: 355px;
     background-color: aquamarine;
     margin-bottom: 30px;
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 20%;
+    margin-left: 20%;
+    text-align:center;
 }
 
 #spl_display {
-    width: 80%;
-    height: 250px;
+    width: 60%;
+    height: 200px;
     background-color: aquamarine;
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 20%;
+    margin-left: 20%;
 }
 
 #c_label, #s_label{
-    text-align: center;
+    text-align:center;
     margin-bottom: 5px;
 }
 
@@ -77,10 +113,15 @@
     text-align: center;
 }
 
+#c_table td{
+    width: 33%;
+    font-size: 12px;
+}
+
 #next_round{
-    text-align:center;
-    margin-right:40%;
-    margin-left: 40%;
+    text-align: center;
+    margin-right:47%;
+    margin-left: 45%;
     margin-top: 5px;
 }
 

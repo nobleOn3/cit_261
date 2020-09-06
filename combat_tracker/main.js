@@ -1,39 +1,66 @@
 import Combatant from './combatant.js';
 import Spell from './spell.js';
 
-//Add event listeners
-document.getElementById('add_combatant').addEventListener('touchend', () => {
+//window.onload = function () {
+console.log("Loaded main.js");
+console.log(document.getElementById('add_combatant'));
+//Add event listeners for function controls
+
+document.getElementById('add_combatant').addEventListener('click', () => {
+    console.log("Add combatant was touched!");
     add_combatant(); 
     display_combatants();
-});
+}, false); 
 
-document.getElementById('add_spell').addEventListener('touchend', () => {
+document.getElementById('add_spell').addEventListener('click', () => {
     add_spell(); 
     display_spells();
 });
 
-document.getElementById('next_round').addEventListener('touchend', () =>{
+document.getElementById('next_round').addEventListener('click', () =>{
+    console.log("Next Round was touched!");
     next_round();
     display_spells();
 })
 
-document.getElementById('attack').addEventListener('touchend', () =>{
+document.getElementById('attack').addEventListener('click', () =>{
     attack(document.getElementById('value').value);
     display_combatants();
     document.getElementById('victim').value = "";
     document.getElementById('value').value = "";
 })
 
-document.getElementById('heal').addEventListener('touchend', () =>{
+document.getElementById('heal').addEventListener('click', () =>{
     heal(document.getElementById('value').value);
     display_combatants();
     document.getElementById('victim').value = "";
     document.getElementById('value').value = "";
 })
 
+//add event listeners for menus
+document.getElementById('add_C_menu').addEventListener('click', () => {
+    document.getElementById('combatant_menu').hidden = !(document.getElementById('combatant_menu').hidden);
+    document.getElementById('spell_menu').hidden = true;
+    document.getElementById('att/heal_menu').hidden = true;
+})
+
+document.getElementById('add_S_menu').addEventListener('click', () => {
+    document.getElementById('spell_menu').hidden = !(document.getElementById('spell_menu').hidden);
+    document.getElementById('att/heal_menu').hidden = true;
+    document.getElementById('combatant_menu').hidden = true;
+})
+
+document.getElementById('att_heal_menu').addEventListener('click', () => {
+    document.getElementById('att/heal_menu').hidden = !(document.getElementById('att/heal_menu').hidden);
+    document.getElementById('combatant_menu').hidden = true;
+    document.getElementById('spell_menu').hidden = true;
+})
+
 //Lists of objects
 let c_list = []; //list of combatants
 let s_list = []; // list of spells
+
+console.log("Got to this point!");
 
 //Display functions
 function display_combatants(){
@@ -150,6 +177,7 @@ function compare_cmbt(a,b){
 }
 
 function next_round() {
+    console.log("Next Round was touched!");
     for(const element of s_list){
         console.log(element);
         element.reduce_duration(1);

@@ -5,11 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Combat Tracker</title>
     <link rel="stylesheet" href="tracker.css">
-    <script src="main.js" defer type="module"></script>
 </head>
 <body>
     <h1 id="welcome">Combat Tracker</h1>
     <h3 id="w_message">The best place to keep your spells in check!</h3>
+
+    <div class="menu">
+        <div class = "menu_buttons">
+            <button class= "menu_button" id = "add_C_menu">+C</button> </br>
+            <button class= "menu_button" id = "add_S_menu">+S</button> </br>
+            <button class= "menu_button" id = "att_heal_menu">A/H</button>
+        </div>
+        <div class="sub_menu" id="combatant_menu" hidden>
+            <input id="name" placeholder="Name"></br>
+            <input id="initiative" placeholder="Initiative"></br>
+            <input id="health_pool" placeholder="Hp"> </br>
+            <button id="add_combatant">Add</button><br>
+        </div>
+        <div class="sub_menu" id="spell_menu" hidden>
+            <input id="spell_name" placeholder="Spell Name"> </br>
+            <input id="duration" placeholder="Duration"> </br>
+            <button id="add_spell">Add</button>
+        </div>
+        <div class="sub_menu" id="att/heal_menu" hidden>
+            <input id="victim" placeholder="Name of Victim"> </br>
+            <input id="value" placeholder="Value"> </br>
+            <button id="attack">Attack</button>
+            <button id="heal">Heal</button>
+        </div>
+    </div>
     
     <div id="char_display">
         <h4 id="c_label">Combatants</h4>
@@ -24,19 +48,6 @@
     </div>
 
     <input id="next_round" type="button" value="Next Round!">
-
-    <div valign = "bottom" class="bot" id="bot">
-        <input id="name" placeholder="Name"> 
-        <input id="initiative" placeholder="Initiative">
-        <input id="health_pool" placeholder="Hp">
-        <button id="add_combatant">Add Combatant</button><br>
-        <input id="spell_name" placeholder="Spell Name">
-        <input id="duration" placeholder="Duration">
-        <button id="add_spell">Add</button><br>
-        <input id="victim" placeholder="Name of Victim">
-        <input id="value" placeholder="Value">
-        <button id="attack">Attack</button>
-        <button id="heal">Heal</button>
-    </div>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
