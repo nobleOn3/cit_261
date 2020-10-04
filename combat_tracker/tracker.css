@@ -43,27 +43,21 @@
     margin-top: 5px;
 }
 
-#add_combatant{
+#add_combatant, #add_spell, #add_t_hp{
     width:74px;
     margin-right: 13px;
     margin-left:13px;
 }
 
-#add_spell{
-    width:74px;
-    margin-right: 13px;
-    margin-left:13px;
-}
-
-#victim, #value{
+#victim, #value, #t_hp_target, #t_hp{
     width: 90px;
     margin-bottom: 5px;
     margin-top: 5px;
 }
 
-#attack, #heal {
+#attack, #heal{
     width: 60px;
-    margin-right: 20%;
+    margin-right: 30%;
     margin-left:20%;
 }
 

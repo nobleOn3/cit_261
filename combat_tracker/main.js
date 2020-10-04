@@ -42,17 +42,27 @@ document.getElementById('add_C_menu').addEventListener('click', () => {
     document.getElementById('combatant_menu').hidden = !(document.getElementById('combatant_menu').hidden);
     document.getElementById('spell_menu').hidden = true;
     document.getElementById('att/heal_menu').hidden = true;
+    document.getElementById('misc_menu').hidden = true;
 })
 
 document.getElementById('add_S_menu').addEventListener('click', () => {
     document.getElementById('spell_menu').hidden = !(document.getElementById('spell_menu').hidden);
     document.getElementById('att/heal_menu').hidden = true;
     document.getElementById('combatant_menu').hidden = true;
+    document.getElementById('misc_menu').hidden = true;
 })
 
 document.getElementById('att_heal_menu').addEventListener('click', () => {
     document.getElementById('att/heal_menu').hidden = !(document.getElementById('att/heal_menu').hidden);
     document.getElementById('combatant_menu').hidden = true;
+    document.getElementById('spell_menu').hidden = true;
+    document.getElementById('misc_menu').hidden = true;
+})
+
+document.getElementById('add_misc_menu').addEventListener('click', () => {
+    document.getElementById('misc_menu').hidden = !(document.getElementById('misc_menu').hidden);
+    document.getElementById('combatant_menu').hidden = true;
+    document.getElementById('att/heal_menu').hidden = true;
     document.getElementById('spell_menu').hidden = true;
 })
 
