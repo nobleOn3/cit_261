@@ -7,12 +7,23 @@ export default class Combatant {
     constructor(n, i, h) {
         this.name = n;
         this.hp =  parseInt(h);
+        this.temp_hp = 0;
         this.initiative = i;
         this.alive = true;
     }
 
     getHit(value) {
-        this.hp -= value;
+        if(this.temp_hp > 0){
+            this.temp_hp -= parseInt(value);
+
+            if (this.temp_hp < 0){
+                value = -(this.temp_hp);
+                this.temp_hp = 0;
+                this.hp -= value;
+            }
+        }
+        else
+            this.hp -= parseInt(value);
     }
 
     getHealed(value) {
@@ -25,6 +36,10 @@ export default class Combatant {
 
     kill() {
         this.alive = false;
+    }
+
+    gain_temp_hp(value){
+        this.temp_hp += parseInt(value);
     }
 
 }

@@ -37,6 +37,13 @@ document.getElementById('heal').addEventListener('click', () =>{
     document.getElementById('value').value = "";
 })
 
+document.getElementById('add_t_hp').addEventListener('click', () =>{
+    gain_t_hp(document.getElementById('t_hp').value);
+    display_combatants();
+    document.getElementById('t_hp_target').value = "";
+    document.getElementById('t_hp').value = "";
+})
+
 //add event listeners for menus
 document.getElementById('add_C_menu').addEventListener('click', () => {
     document.getElementById('combatant_menu').hidden = !(document.getElementById('combatant_menu').hidden);
@@ -93,6 +100,10 @@ function display_combatants(){
     newCell.innerHTML = "HP";
     newRow.appendChild(newCell);
 
+    newCell = document.createElement('td');
+    newCell.innerHTML = "Temp. HP";
+    newRow.appendChild(newCell);
+
 
     c_display.appendChild(newRow); 
 
@@ -110,6 +121,10 @@ function display_combatants(){
 
         newCell = document.createElement('td');
         newCell.innerHTML = element.hp;
+        newRow.appendChild(newCell);
+
+        newCell = document.createElement('td');
+        newCell.innerHTML = element.temp_hp;
         newRow.appendChild(newCell);
 
 
@@ -203,7 +218,7 @@ function checkSpell(spell, element){
 }
 
 function attack(damage){
-    let combatant = c_list.find(checkCombatant);
+    let combatant = c_list.find(checkCombatant_a_h);
 
     combatant.getHit(damage);
 
@@ -214,8 +229,12 @@ function attack(damage){
     }
 }
 
-function checkCombatant(combatant){
+function checkCombatant_a_h(combatant){
     return combatant.name == document.getElementById('victim').value;
+}
+
+function checkCombatant_thp(combatant){
+    return combatant.name == document.getElementById('t_hp_target').value;
 }
 
 function findCombatant(tmpCom, combatant)
@@ -224,9 +243,15 @@ function findCombatant(tmpCom, combatant)
 }
 
 function heal(healing){
-    let combatant = c_list.find(checkCombatant);
+    let combatant = c_list.find(checkCombatant_a_h);
 
     combatant.getHealed(healing);
+}
+
+function gain_t_hp(t_hp){
+    let combatant = c_list.find(checkCombatant_thp);
+
+    combatant.gain_temp_hp(t_hp);
 }
 
 
