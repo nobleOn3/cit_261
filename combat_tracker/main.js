@@ -4,8 +4,8 @@ import Spell from './spell.js';
 //window.onload = function () {
 console.log("Loaded main.js");
 console.log(document.getElementById('add_combatant'));
-//Add event listeners for function controls
 
+//Add event listeners for function controls
 document.getElementById('add_combatant').addEventListener('click', () => {
     console.log("Add combatant was touched!");
     add_combatant(); 
@@ -44,12 +44,20 @@ document.getElementById('add_t_hp').addEventListener('click', () =>{
     document.getElementById('t_hp').value = "";
 })
 
+document.getElementById('reset').addEventListener('click', () =>{
+    reset_all();
+    display_combatants();
+    display_spells();
+})
+
+
 //add event listeners for menus
 document.getElementById('add_C_menu').addEventListener('click', () => {
     document.getElementById('combatant_menu').hidden = !(document.getElementById('combatant_menu').hidden);
     document.getElementById('spell_menu').hidden = true;
     document.getElementById('att/heal_menu').hidden = true;
     document.getElementById('t_hp_menu').hidden = true;
+    document.getElementById('misc_menu').hidden = true;
 })
 
 document.getElementById('add_S_menu').addEventListener('click', () => {
@@ -57,6 +65,7 @@ document.getElementById('add_S_menu').addEventListener('click', () => {
     document.getElementById('att/heal_menu').hidden = true;
     document.getElementById('combatant_menu').hidden = true;
     document.getElementById('t_hp_menu').hidden = true;
+    document.getElementById('misc_menu').hidden = true;
 })
 
 document.getElementById('att_heal_menu').addEventListener('click', () => {
@@ -64,6 +73,7 @@ document.getElementById('att_heal_menu').addEventListener('click', () => {
     document.getElementById('combatant_menu').hidden = true;
     document.getElementById('spell_menu').hidden = true;
     document.getElementById('t_hp_menu').hidden = true;
+    document.getElementById('misc_menu').hidden = true;
 })
 
 document.getElementById('add_t_hp_menu').addEventListener('click', () => {
@@ -71,6 +81,15 @@ document.getElementById('add_t_hp_menu').addEventListener('click', () => {
     document.getElementById('combatant_menu').hidden = true;
     document.getElementById('att/heal_menu').hidden = true;
     document.getElementById('spell_menu').hidden = true;
+    document.getElementById('misc_menu').hidden = true;
+})
+
+document.getElementById('add_misc').addEventListener('click', () => {
+    document.getElementById('misc_menu').hidden = !(document.getElementById('misc_menu').hidden);
+    document.getElementById('combatant_menu').hidden = true;
+    document.getElementById('att/heal_menu').hidden = true;
+    document.getElementById('spell_menu').hidden = true;
+    document.getElementById('t_hp_menu').hidden = true;
 })
 
 //Lists of objects
@@ -252,6 +271,11 @@ function gain_t_hp(t_hp){
     let combatant = c_list.find(checkCombatant_thp);
 
     combatant.gain_temp_hp(t_hp);
+}
+
+function reset_all(){
+    c_list = [];
+    s_list = [];
 }
 
 

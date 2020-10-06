@@ -43,7 +43,7 @@
     margin-top: 5px;
 }
 
-#add_combatant, #add_spell, #add_t_hp{
+#add_combatant, #add_spell, #add_t_hp, #reset{
     width:74px;
     margin-right: 13px;
     margin-left:13px;
