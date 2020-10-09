@@ -53,6 +53,7 @@ document.getElementById('reset').addEventListener('click', () =>{
 
 //add event listeners for menus
 document.getElementById('add_C_menu').addEventListener('click', () => {
+    //document.getElementById('combatant_menu').classList.add('sub_menu_found');
     document.getElementById('combatant_menu').hidden = !(document.getElementById('combatant_menu').hidden);
     document.getElementById('spell_menu').hidden = true;
     document.getElementById('att/heal_menu').hidden = true;
