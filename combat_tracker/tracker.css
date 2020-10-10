@@ -1,3 +1,5 @@
+/*orange #FCB07E Green #51CD5D  steel blue #3581B8  Platnium #EBE9E9 Gunmetal #012A36*/
+
 .bot{
     position:fixed;
 	bottom:0;
@@ -23,24 +25,24 @@
 .menu_button{
     height: 40px;
     width: 120px;
-    background-color: #C1B081;
-    border:3px solid #323875;
+    background-color: #FCB07E;
+    border:3px solid #012A36;
     transition-duration: 0.4s;
 }
 
 .menu_button:hover{
-    background-color: white;
+    background-color: #EBE9E9;
 }
 .sub_menu{
     float: left;
-    background-color:#C1B081;
+    background-color:#012A36;
     width: 100px;
     height: 200px;
 }
 
 .sub_menu_found{
     float: left;
-    background-color:#C1B081;
+    background-color:#51CD5D;
     width: 100px;
     height: 200px;
     transition: 0.4s;
@@ -84,24 +86,24 @@
 
 #welcome{
     text-align: center;
-    color: #AA8b79;
+    color: #EBE9E9;
     -webkit-text-stroke-width: 2px; 
-    -webkit-text-stroke-color: #C1B081; 
+    -webkit-text-stroke-color: #51CD5D; 
 }
 
 #w_message{
     text-align: center;
     margin-top: 0px;
-    color:#AA8b79;
+    color:#EBE9E9;
     -webkit-text-stroke-width: 1px; 
-    -webkit-text-stroke-color: #C1B081; 
+    -webkit-text-stroke-color: #51CD5D; 
 }
 
 
 #char_display {
     width: 40%;
     height: 355px;
-    background-color: #C1B081;
+    background-color: #EBE9E9;
     margin-bottom: 20px;
     margin-right: 30%;
     margin-left: 30%;
@@ -111,7 +113,7 @@
 #spl_display {
     width: 40%;
     height: 275px;
-    background-color: #C1B081;
+    background-color: #EBE9E9;
     margin-right: 30%;
     margin-left: 30%;
 }
@@ -119,7 +121,7 @@
 #c_label, #s_label{
     text-align:center;
     margin-bottom: 5px;
-    color: #0E1665;
+    color: #51CD5D;
 }
 
 #c_table{
@@ -155,5 +157,5 @@
 }
 
 body{
-    background-color: #323875;
+    background-color: #3581B8;
 }
