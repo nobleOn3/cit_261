@@ -9,7 +9,7 @@
 
 .menu{
     float:right;
-    width: 220px;
+    width: 225px;
     height: 400px;
     margin-right:0px;
     clear:both;
@@ -27,6 +27,7 @@
     width: 120px;
     background-color: #FCB07E;
     border:3px solid #012A36;
+    color: #012A36;
     transition-duration: 0.4s;
 }
 
@@ -36,7 +37,7 @@
 .sub_menu{
     float: left;
     background-color:#012A36;
-    width: 100px;
+    width: 105px;
     height: 200px;
 }
 
@@ -49,13 +50,17 @@
 
 }
 #name, #initiative, #health_pool{
-    width: 90px;
+    width: 85px;
+    /*margin-right: 5px;*/
+    margin-left:5px;
     margin-bottom: 5px;
     margin-top: 5px;
 }
 
 #spell_name, #duration{
-    width: 90px;
+    width: 85px;
+    /*margin-right: 5px;*/
+    margin-left:5px;
     margin-bottom: 5px;
     margin-top: 5px;
 }
@@ -74,6 +79,8 @@
 
 #victim, #value, #t_hp_target, #t_hp{
     width: 90px;
+    /*margin-right: 5px;*/
+    margin-left:5px;
     margin-bottom: 5px;
     margin-top: 5px;
 }
@@ -158,6 +165,7 @@
     border:3px solid #012A36;
     transition-duration: 0.4s;
     border-radius: 2px;
+    color: #012A36;
 }
 
 #next_round:hover{
