@@ -11,6 +11,7 @@
     float:right;
     width: 225px;
     height: 400px;
+    margin-top: 23px;
     margin-right:0px;
     clear:both;
 }
@@ -91,11 +92,16 @@
     margin-left:20%;
 }
 
+#welcome_box{
+    /*float:left;*/
+    margin-top:0px;
+    padding-top:0px;
+}
+
 #welcome{
-    text-align: center;
-    color: #EBE9E9;
-    -webkit-text-stroke-width: 2px; 
-    -webkit-text-stroke-color: #51CD5D; 
+    margin-left: 44%;
+    width: 150px;
+    height: 150px; 
 }
 
 #w_message{
@@ -146,7 +152,7 @@
 }
 
 #c_table td{
-    width: 33%;
+    width: 25%;
     font-size: 12px;
     color: #012A36
 }
