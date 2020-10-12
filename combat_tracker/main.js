@@ -23,6 +23,15 @@ document.getElementById('next_round').addEventListener('click', () =>{
     display_spells();
 })
 
+document.addEventListener("keypress", (e) => {
+    console.log("Got into the check for keypress");
+    if(e.key == '`')
+    {
+        next_round();
+        display_spells();
+    }
+}, false)
+
 document.getElementById('attack').addEventListener('click', () =>{
     attack(document.getElementById('value').value);
     display_combatants();
@@ -97,7 +106,7 @@ document.getElementById('add_misc').addEventListener('click', () => {
 let c_list = []; //list of combatants
 let s_list = []; // list of spells
 
-console.log("Got to this point!");
+//console.log("Got to this point!");
 
 //Display functions
 function display_combatants(){
